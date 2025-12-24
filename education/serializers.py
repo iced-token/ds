@@ -34,6 +34,9 @@ class TeacherSerializer(ModelSerializer):
     class Meta:
         model = Teacher
         exclude = []
+        extra_kwargs = {
+            'user': { 'required': False }
+        }
 
 class CourseSerializer(ModelSerializer):
 
